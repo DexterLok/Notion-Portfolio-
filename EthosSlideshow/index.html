@@ -224,6 +224,7 @@ body {
     const slides = document.querySelectorAll(".slide");
     const nextButton = document.getElementById("next");
     const prevButton = document.getElementById("prev");
+
     
     let slideInterval;
 
@@ -249,23 +250,14 @@ body {
 
     nextButton.addEventListener("click", () => {
       nextSlide();
-      if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
-      }
+    
     });
     prevButton.addEventListener("click", () => {
       prevSlide();
-      if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
-      }
+    
     });
 
-    if (auto) {
-      slideInterval = setInterval(nextSlide, intervalTime);
-    }
-
+   
   </script>
 
 </body>
